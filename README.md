@@ -19,6 +19,10 @@ Halo 2.0 的 OAuth2 第三方登录插件。
 | GitHub | [https://docs.github.com](https://docs.github.com/en/apps/oauth-apps/building-oauth-apps/creating-an-oauth-app)                                        | `Client ID` `Client Secret` | 无需手动设置 | `<SITE_URL>/login/oauth2/code/github` |
 | GitLab | [https://docs.gitlab.com](https://docs.gitlab.com/ee/integration/oauth_provider.html#configure-gitlab-as-an-oauth-20-authentication-identity-provider) | `Client ID` `Client Secret` | `read_user`  | `<SITE_URL>/login/oauth2/code/gitlab` |
 | Gitee  | <https://gitee.com/oauth/applications>                                                                                                                 | `Client ID` `Client Secret` | `user_info`  | `<SITE_URL>/login/oauth2/code/gitee`  |
+| 微信 | [https://open.weixin.qq.com](https://open.weixin.qq.com) | `Client ID` `Client Secret` | `snsapi_login` | `<SITE_URL>/login/oauth2/code/wechat` |
+| QQ | [https://graph.qq.com](https://graph.qq.com) | `Client ID` `Client Secret` | `get_user_info` | `<SITE_URL>/login/oauth2/code/qq` |
+| 百度 | [https://openapi.baidu.com](https://openapi.baidu.com) | `Client ID` `Client Secret` | `basic` | `<SITE_URL>/login/oauth2/code/baidu` |
+| 阿里云 | [https://www.aliyun.com](https://www.aliyun.com) | `Client ID` `Client Secret` | `user:read` | `<SITE_URL>/login/oauth2/code/aliyun` |
 
 注意事项：
 

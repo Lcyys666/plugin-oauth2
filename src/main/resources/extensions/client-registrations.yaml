@@ -48,3 +48,71 @@ spec:
   userInfoAuthenticationMethod: "header"
   userNameAttributeName: "username"
   clientName: "GitLab"
+---
+apiVersion: oauth.halo.run/v1alpha1
+kind: Oauth2ClientRegistration
+metadata:
+  name: wechat
+spec:
+  clientAuthenticationMethod: "client_secret_basic"
+  authorizationGrantType: "authorization_code"
+  redirectUri: "{baseUrl}/login/oauth2/code/wechat"
+  scopes:
+    - "snsapi_login"
+  authorizationUri: "https://open.weixin.qq.com/connect/qrconnect"
+  tokenUri: "https://api.weixin.qq.com/sns/oauth2/access_token"
+  userInfoUri: "https://api.weixin.qq.com/sns/userinfo"
+  userInfoAuthenticationMethod: "header"
+  userNameAttributeName: "openid"
+  clientName: "WeChat"
+---
+apiVersion: oauth.halo.run/v1alpha1
+kind: Oauth2ClientRegistration
+metadata:
+  name: qq
+spec:
+  clientAuthenticationMethod: "client_secret_basic"
+  authorizationGrantType: "authorization_code"
+  redirectUri: "{baseUrl}/login/oauth2/code/qq"
+  scopes:
+    - "get_user_info"
+  authorizationUri: "https://graph.qq.com/oauth2.0/authorize"
+  tokenUri: "https://graph.qq.com/oauth2.0/token"
+  userInfoUri: "https://graph.qq.com/user/get_user_info"
+  userInfoAuthenticationMethod: "header"
+  userNameAttributeName: "openid"
+  clientName: "QQ"
+---
+apiVersion: oauth.halo.run/v1alpha1
+kind: Oauth2ClientRegistration
+metadata:
+  name: baidu
+spec:
+  clientAuthenticationMethod: "client_secret_basic"
+  authorizationGrantType: "authorization_code"
+  redirectUri: "{baseUrl}/login/oauth2/code/baidu"
+  scopes:
+    - "basic"
+  authorizationUri: "https://openapi.baidu.com/oauth/2.0/authorize"
+  tokenUri: "https://openapi.baidu.com/oauth/2.0/token"
+  userInfoUri: "https://openapi.baidu.com/rest/2.0/passport/users/getInfo"
+  userInfoAuthenticationMethod: "header"
+  userNameAttributeName: "openid"
+  clientName: "Baidu"
+---
+apiVersion: oauth.halo.run/v1alpha1
+kind: Oauth2ClientRegistration
+metadata:
+  name: aliyun
+spec:
+  clientAuthenticationMethod: "client_secret_basic"
+  authorizationGrantType: "authorization_code"
+  redirectUri: "{baseUrl}/login/oauth2/code/aliyun"
+  scopes:
+    - "user:read"
+  authorizationUri: "https://oauth.aliyun.com/v1.0/authorize"
+  tokenUri: "https://oauth.aliyun.com/v1.0/token"
+  userInfoUri: "https://oauth.aliyun.com/v1.0/userinfo"
+  userInfoAuthenticationMethod: "header"
+  userNameAttributeName: "user_id"
+  clientName: "AliCloud"

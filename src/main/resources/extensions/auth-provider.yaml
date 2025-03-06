@@ -61,3 +61,87 @@ spec:
     group: genericOauth
   configMapRef:
     name: oauth2-gitlab-config
+---
+apiVersion: auth.halo.run/v1alpha1
+kind: AuthProvider
+metadata:
+  name: wechat
+  labels:
+    auth.halo.run/auth-binding: "true"
+spec:
+  displayName: WeChat
+  description: WeChat is a multi-purpose messaging, social media, and mobile payment app.
+  logo: /plugins/plugin-oauth2/assets/static/wechat.svg
+  website: https://open.weixin.qq.com
+  authenticationUrl: /oauth2/authorization/wechat
+  bindingUrl: /oauth2/authorization/wechat
+  unbindUrl: /apis/uc.api.auth.halo.run/v1alpha1/user-connections/wechat/disconnect
+  authType: oauth2
+  settingRef:
+    name: generic-oauth2-setting
+    group: genericOauth
+  configMapRef:
+    name: oauth2-wechat-config
+---
+apiVersion: auth.halo.run/v1alpha1
+kind: AuthProvider
+metadata:
+  name: qq
+  labels:
+    auth.halo.run/auth-binding: "true"
+spec:
+  displayName: QQ
+  description: QQ is a popular instant messaging software in China.
+  logo: /plugins/plugin-oauth2/assets/static/qq.svg
+  website: https://graph.qq.com
+  authenticationUrl: /oauth2/authorization/qq
+  bindingUrl: /oauth2/authorization/qq
+  unbindUrl: /apis/uc.api.auth.halo.run/v1alpha1/user-connections/qq/disconnect
+  authType: oauth2
+  settingRef:
+    name: generic-oauth2-setting
+    group: genericOauth
+  configMapRef:
+    name: oauth2-qq-config
+---
+apiVersion: auth.halo.run/v1alpha1
+kind: AuthProvider
+metadata:
+  name: baidu
+  labels:
+    auth.halo.run/auth-binding: "true"
+spec:
+  displayName: Baidu
+  description: Baidu is a leading Chinese search engine and AI company.
+  logo: /plugins/plugin-oauth2/assets/static/baidu.svg
+  website: https://openapi.baidu.com
+  authenticationUrl: /oauth2/authorization/baidu
+  bindingUrl: /oauth2/authorization/baidu
+  unbindUrl: /apis/uc.api.auth.halo.run/v1alpha1/user-connections/baidu/disconnect
+  authType: oauth2
+  settingRef:
+    name: generic-oauth2-setting
+    group: genericOauth
+  configMapRef:
+    name: oauth2-baidu-config
+---
+apiVersion: auth.halo.run/v1alpha1
+kind: AuthProvider
+metadata:
+  name: aliyun
+  labels:
+    auth.halo.run/auth-binding: "true"
+spec:
+  displayName: AliCloud
+  description: Alibaba Cloud provides cloud computing services.
+  logo: /plugins/plugin-oauth2/assets/static/aliyun.svg
+  website: https://www.aliyun.com
+  authenticationUrl: /oauth2/authorization/aliyun
+  bindingUrl: /oauth2/authorization/aliyun
+  unbindUrl: /apis/uc.api.auth.halo.run/v1alpha1/user-connections/aliyun/disconnect
+  authType: oauth2
+  settingRef:
+    name: generic-oauth2-setting
+    group: genericOauth
+  configMapRef:
+    name: oauth2-aliyun-config
