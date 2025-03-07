@@ -4,7 +4,7 @@ Halo 2.0 的 OAuth2 第三方登录插件。
 
 ## 使用方法
 
-1. 在 [Releases](https://github.com/halo-sigs/plugin-oauth2/releases) 下载最新的 JAR 文件。
+1. 在 [Releases](https://github.com/Lcyys666/plugin-oauth2/releases) 下载最新的 JAR 文件。
 2. 在 Halo 后台的插件管理上传 JAR 文件进行安装。
 3. 进入 Console 端的用户管理，点击右上角的 `认证方式` 按钮进入认证方式管理列表即可看到当前插件提供的认证方式。
 4. 按照下方的配置指南配置所需的认证方式并启用。
